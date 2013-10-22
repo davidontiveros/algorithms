@@ -57,10 +57,10 @@ public class Algorithms
 			else
 				result[k++]=b[j++];			
 		}
-		if(i<a.length)
+		if(i<a.length) // you can remove this line... while(i<a.length) already has condition
 			while(i<a.length)
 				result[k++]=a[i++];
-		else
+		else // remove this too
 			while(j<b.length)
 				result[k++]=b[j++];
 		
