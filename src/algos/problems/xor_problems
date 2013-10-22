@@ -1,4 +1,3 @@
-
 /*
 * We have an array with all the elements repeating twice, except for two numbers
 * e.g.  [1,1,20,20,4,5]    num1 = 4  num2 = 5
@@ -18,14 +17,21 @@ public class Main {
         }
 
         //get the first occurrence of the bit 1 in total_xor, from left to right
+        //integers are only 32 bit.. thats why bit_index < 32
         int bit_index = 0;
         while ((total_xor & 1) == 0 && bit_index < 32) {
-            total_xor = total_xor >> 1;
+            total_xor = total_xor >> 1; // shift to right until we find a "1"
             bit_index++;
         }
 
+        //as xor = 1 only when both elements are different i.e. xor = 1 if (1 xor 0)
+        // as total_xor = num1 ^ num2   because, all the elements have duplicates, when xoring a duplicate, the result is 0
+        // that means one number has that bit 1. but the other doesn´t
+        //we can split the array into numbers with that bit, and numbers without that bit
+
         //partition array into to arrays each containing one non-duplicate number
         for (int i = 0; i < array.length; i++) {
+            //shift number to right bit_index times and check if it´s a "1"
             if (((array[i] >> bit_index) & 1) == 0) {
                 num1 = num1 ^ array[i];
             } else {
