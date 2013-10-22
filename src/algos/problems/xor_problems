@@ -1,0 +1,41 @@
+
+/*
+* We have an array with all the elements repeating twice, except for two numbers
+* e.g.  [1,1,20,20,4,5]    num1 = 4  num2 = 5
+* Find num1 & num2 in O(n) time and O(1) space
+*/
+
+public class Main {
+
+    static void print_numbers(int[] array) {
+        int total_xor = 0;
+        int num1 = 0, num2 = 0;
+
+        //compute the total xor
+        // total_xor = num1 ^ num2;
+        for (int i = 0; i < array.length; i++) {
+            total_xor = total_xor ^ array[i];
+        }
+
+        //get the first occurrence of the bit 1 in total_xor, from left to right
+        int bit_index = 0;
+        while ((total_xor & 1) == 0 && bit_index < 32) {
+            total_xor = total_xor >> 1;
+            bit_index++;
+        }
+
+        //partition array into to arrays each containing one non-duplicate number
+        for (int i = 0; i < array.length; i++) {
+            if (((array[i] >> bit_index) & 1) == 0) {
+                num1 = num1 ^ array[i];
+            } else {
+                num2 = num2 ^ array[i];
+            }
+        }
+        System.out.println(num1 + " " + num2);
+    }
+
+    public static void main(String[] args) {
+        print_numbers(new int[]{2, 4, 3, 6, 3, 2, 5, 5});
+    }
+}
