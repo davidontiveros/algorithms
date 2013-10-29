@@ -1,5 +1,10 @@
 package algos.problems.strings;
 
+/**
+ * 
+ * @author daviD_dev
+ *
+ */
 public class IsRotatedString
 {
 	public static void main(String args[])

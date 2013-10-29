@@ -1,5 +1,10 @@
 package algos.datastructures.trees;
 
+/**
+ * 
+ * @author daviD_dev
+ *
+ */
 public class Node
 {
 	public Node parent = null;

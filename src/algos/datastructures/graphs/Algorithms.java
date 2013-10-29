@@ -2,6 +2,11 @@ package algos.datastructures.graphs;
 
 import java.util.*;
 
+/**
+ * 
+ * @author daviD_dev
+ *
+ */
 public class Algorithms
 {
 	static UndirectedGraph graph = new UndirectedGraph(9);	

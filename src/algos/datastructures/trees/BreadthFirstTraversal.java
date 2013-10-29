@@ -2,6 +2,11 @@ package algos.datastructures.trees;
 
 import java.util.*;
 
+/**
+ * 
+ * @author daviD_dev
+ *
+ */
 public class BreadthFirstTraversal
 {
 	private LinkedList<Node> queue = new LinkedList<Node>();

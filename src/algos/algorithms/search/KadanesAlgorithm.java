@@ -11,6 +11,11 @@ package algos.algorithms.search;
 	(in which case its sum is zero) or consists of one more element than 
 	the maximum subarray ending at the previous position.
 */
+/**
+ * 
+ * @author daviD_dev
+ *
+ */
 public class KadanesAlgorithm
 {
 	public static void main(String args[])

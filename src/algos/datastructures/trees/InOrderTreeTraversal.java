@@ -1,5 +1,10 @@
 package algos.datastructures.trees;
 
+/**
+ * 
+ * @author daviD_dev
+ *
+ */
 public class InOrderTreeTraversal
 {		
 	public  void traverse(Node node)

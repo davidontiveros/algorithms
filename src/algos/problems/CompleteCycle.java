@@ -11,6 +11,11 @@ package algos.problems;
 	And let us say you get fuel 4 at B, total = 7, if B to C you need 8 that means you cannot go further, so A is not a possible start point to complete a cycle
 	Given the fuel we get at each station and distance from every station to the next, find a start point from which you can complete a cycle
 */
+/**
+ * 
+ * @author daviD_dev
+ *
+ */
 public class CompleteCycle
 {
 	static int fuelAtStation[] = {5,3,4,3,1};

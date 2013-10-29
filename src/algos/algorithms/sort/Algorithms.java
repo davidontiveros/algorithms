@@ -1,6 +1,13 @@
 package algos.algorithms.sort;
 
-public class Algorithms 
+import algos.algorithms.BaseOperations;
+
+/**
+ * 
+ * @author daviD_dev
+ *
+ */
+public class Algorithms
 {
 	
 	public static void main(String args[])
@@ -9,7 +16,7 @@ public class Algorithms
 		int a[] = {0,1,2,5,6,9};
 		int b[] = {1,3,7};
 		int result[] = new Algorithms().merge2SortedArrays(a, b);
-		Quicksort.printArray(result);
+		BaseOperations.printArray(result);
 		
 		
 		/* Test #2 convert2DArrayto1DArray(); */ 
@@ -18,7 +25,7 @@ public class Algorithms
 		int e[] = {1, 3, 7};
 		int input[][] = {c,d,e};		
 		int result2[] = new Algorithms().convert2DArrayto1DArray(input);
-		Quicksort.printArray(result2);
+		BaseOperations.printArray(result2);
 		
 	}
 	

@@ -1,5 +1,16 @@
 package algos.algorithms.sort;
 
+import algos.algorithms.BaseOperations;
+
+/**
+ * Pick a random element and partition the array, 
+ * such that all numbers that are less than it come before all elements that are greater than it. 
+ * Then do that for each half, then each quarter, etc. 
+ * O(n log n) expected, O(n^2) worst case.
+ * 
+ * @author daviD_dev
+ *
+ */
 public class Quicksort
 {
 	public static void main(String args[])
@@ -9,11 +20,11 @@ public class Quicksort
 		//System.out.println(quicksort(string.toCharArray(),0,string.length()-1));		
 		
 		int input[] = {2,5,2,2,5,1};
-		printArray(input);
-		printArray(quicksort(input,0,input.length-1));
+		BaseOperations.printArray(input);
+		BaseOperations.printArray(new Quicksort().quicksort(input,0,input.length-1));
 	}
 	
-	public static int[] sort(int array[])
+	public int[] sort(int array[])
 	{
 		int result[] = new int[array.length];
 		for(int i=0; i<array.length;i++)
@@ -23,7 +34,17 @@ public class Quicksort
 		return quicksort(result, 0, array.length-1);
 	}
 	
-	public static int[] quicksort(int input[], int left, int right)
+	public Integer[] sort(Integer array[])
+	{
+		Integer result[] = new Integer[array.length];
+		for(int i=0; i<array.length;i++)
+		{
+			result[i]=array[i];
+		}
+		return quicksort(result, 0, array.length-1);
+	}
+	
+	public int[] quicksort(int input[], int left, int right)
 	{
 		int i = left; 
 		int j = right;
@@ -34,7 +55,7 @@ public class Quicksort
 			while(input[j]>pivot ) j--;			
 			if(i<=j)
 			{
-				swap(input,i,j);
+				BaseOperations.swap(input,i,j);
 				i++;
 				j--;
 			}
@@ -48,26 +69,37 @@ public class Quicksort
 		return input;
 	}
 	
-	private static void swap(int input[], int i, int j)
-	{
-		int aux = input[j];
-		input[j]=input[i];
-		input[i]=aux;
-	}
 	
-	public static void printArray(int array[])
+	public Integer[] quicksort(Integer input[], int left, int right)
 	{
-		for(int o : array)
+		int i = left; 
+		int j = right;
+		int pivot = input[(left+right)/2];
+		do
 		{
-			System.out.print(o+",");
-		}
-		System.out.println();
+			while(input[i]<pivot ) i++;
+			while(input[j]>pivot ) j--;			
+			if(i<=j)
+			{
+				BaseOperations.swap(input,i,j);
+				i++;
+				j--;
+			}
+		}while(i<=j);		
+		
+		if(left<j) 
+			input = quicksort(input,left,j);
+		if(i<right) 
+			input = quicksort(input,i,right);		
+			
+		return input;
 	}
+		
 	
 	/**
 		CHAR ARRAYS SORTING 
 	**/
-	private static char[] quicksort(char string[], int left, int right)
+	private char[] quicksort(char string[], int left, int right)
 	{		
 		int i = left; 
 		int j = right;
@@ -80,7 +112,7 @@ public class Quicksort
 			while(string[j]>pivot) j--;			
 			if(i<=j)
 			{
-				swap(string,i,j);
+				BaseOperations.swap(string,i,j);
 				i++;
 				j--;
 			}
@@ -92,12 +124,5 @@ public class Quicksort
 			string = quicksort(string,i,right);
 		
 		return string;
-	}
-	
-	private static void swap(char string[], int i, int j)
-	{
-		char aux = string[j];
-		string[j]=string[i];
-		string[i]=aux;
-	}
+	}	
 }

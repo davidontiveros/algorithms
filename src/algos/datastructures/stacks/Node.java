@@ -1,5 +1,10 @@
 package algos.datastructures.stacks;
 
+/**
+ * 
+ * @author daviD_dev
+ *
+ */
 public class Node
 {
 	public String value;

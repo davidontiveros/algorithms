@@ -1,9 +1,10 @@
 package algos.problems;
 
 /**
-Write  a  function  to  convert  a  string  into  an  integer.  
-This  function  is  called  A to I (or  atoi())  because  we  are  converting  an  ASCII  string  into  an  integer.
-**/
+ * 
+ * @author daviD_dev
+ *
+ */
 public class StringToInteger
 {
 	public static void main(String args[])

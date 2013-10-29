@@ -6,6 +6,11 @@ package algos.datastructures.stacks;
 	The stack is a Last-In-First-Out (LIFO) data structure, the last element added to the structure must be the first one to be removed. 
 	Adding items to or removing items from the end is O(1) time.
 */
+/**
+ * 
+ * @author daviD_dev
+ *
+ */
 public class Stack
 {
 

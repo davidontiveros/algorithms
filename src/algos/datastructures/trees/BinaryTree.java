@@ -1,5 +1,10 @@
 package algos.datastructures.trees;
 
+/**
+ * 
+ * @author daviD_dev
+ *
+ */
 public class BinaryTree
 {
 	public static void main(String args[])

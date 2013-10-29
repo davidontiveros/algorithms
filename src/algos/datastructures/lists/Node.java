@@ -1,5 +1,10 @@
 package algos.datastructures.lists;
 
+/**
+ * 
+ * @author daviD_dev
+ *
+ */
 public class Node
 {
 	public String val;

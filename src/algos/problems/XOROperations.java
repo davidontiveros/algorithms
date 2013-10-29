@@ -32,4 +32,11 @@ public class XOROperations
 		a=a^b;
 		System.out.println(a+","+b);
 	}
+	
+	public static void swap(int array[],int a, int b)
+	{
+		array[a] = array[a]^array[b]; 
+		array[b] = array[a]^array[b];
+		array[a] = array[a]^array[b]; 				
+	}
 }

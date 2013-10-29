@@ -1,5 +1,10 @@
 package algos.datastructures.graphs;
 
+/**
+ * 
+ * @author daviD_dev
+ *
+ */
 public class Node
 {
 	public String name = null;	

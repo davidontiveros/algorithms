@@ -74,7 +74,7 @@ public class RemoveLinkedListDuplicates
 		Input: (3 -> 1 -> 5), (5 -> 9 -> 2)
 		Output: 8 -> 0 -> 8
 	*/
-	public static Node sumThatShit(Node node1, Node node2, int extraCarry, Node result)
+	public static Node sumThat(Node node1, Node node2, int extraCarry, Node result)
 	{
 		if(node1==null && node2==null)
 			return result;
@@ -96,7 +96,7 @@ public class RemoveLinkedListDuplicates
 		if(result == null)
 			result = new Node(sum);
 		
-		return sumThatShit( node1.next != null ? node1.next : null,
+		return sumThat( node1.next != null ? node1.next : null,
 							node2.next != null ? node2.next : null, 
 							extraCarry,
 							result.next);
