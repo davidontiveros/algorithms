@@ -30,7 +30,7 @@ public class MinimumRange
 		// {0,4,5}, intialize the heap
 		int heap[] = {a1[p1],a2[p2],a3[p3]};
 		System.out.println("initial: "); BaseOperations.printArray(heap);
-		int heapSorted[] = new Quicksort().sort(heap);		
+		int heapSorted[] = new QuickSort().sort(heap);		
 		int minRange = heapSorted[2] - heapSorted[0];		
 		int minHeap[] = {heap[0],heap[1],heap[2]};
 		while(true)
@@ -40,7 +40,7 @@ public class MinimumRange
 			//we finish
 			if(stop)
 				break;			
-			heapSorted = new Quicksort().sort(heap);
+			heapSorted = new QuickSort().sort(heap);
 			int range = heapSorted[2] - heapSorted[0];
 			System.out.println("range: "+range);
 			//calculate and keep track of the actual range
@@ -52,7 +52,7 @@ public class MinimumRange
 				minHeap[2] = heap[2];
 			}
 		}
-		heapSorted = new Quicksort().sort(minHeap);
+		heapSorted = new QuickSort().sort(minHeap);
 		System.out.println("["+heapSorted[0]+","+heapSorted[2]+"]");		
 	}
 	

@@ -11,7 +11,7 @@ public class Threshold
 	public static void main(String args[])
 	{
 		int a[] = {6,5,3,9,1};				
-		a = new Quicksort().quicksort(a,0,a.length-1);
+		a = new QuickSort().quicksort(a,0,a.length-1);
 		
 		int i=0;
 		int j=a.length-1;

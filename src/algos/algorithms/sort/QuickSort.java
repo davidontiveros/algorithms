@@ -11,7 +11,7 @@ import algos.algorithms.BaseOperations;
  * @author daviD_dev
  *
  */
-public class Quicksort
+public class QuickSort
 {
 	public static void main(String args[])
 	{		
@@ -21,7 +21,7 @@ public class Quicksort
 		
 		int input[] = {2,5,2,2,5,1};
 		BaseOperations.printArray(input);
-		BaseOperations.printArray(new Quicksort().quicksort(input,0,input.length-1));
+		BaseOperations.printArray(new QuickSort().quicksort(input,0,input.length-1));
 	}
 	
 	public int[] sort(int array[])

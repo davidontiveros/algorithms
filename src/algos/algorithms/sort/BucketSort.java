@@ -62,7 +62,7 @@ public class BucketSort {
 			{
 				Integer array[] = new Integer[buckets.get(i).size()];
 				array = buckets.get(i).toArray(array);
-				BaseOperations.printArray(new Quicksort().sort(array));
+				BaseOperations.printArray(new QuickSort().sort(array));
 			}
 			
 		}

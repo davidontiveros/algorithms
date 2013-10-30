@@ -1,12 +1,13 @@
 package algos.datastructures.lists;
 
-/*
-	Write code to remove duplicates from an unsorted linked list.
-	FOLLOW UP
-	How would you solve this problem if a temporary buffer is not allowed?
-*/
-public class RemoveLinkedListDuplicates
+/**
+ * 
+ * @author daviD_dev
+ *
+ */
+public class Problems
 {
+	
 	public static void main(String args[])
 	{
 		// First sort the linked list (i.e. using mergesort) and then you will have a list like below
@@ -33,6 +34,11 @@ public class RemoveLinkedListDuplicates
 		*/
 	}
 	
+	/*
+		Write code to remove duplicates from an unsorted linked list.
+		FOLLOW UP
+		How would you solve this problem if a temporary buffer is not allowed?
+	 */
 	public static void removeDuplicates(Node head)
 	{
 		if(head.next == null)

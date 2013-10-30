@@ -8,7 +8,7 @@ import java.util.*;
  * @author daviD_dev
  *
  */
-public class Algorithms
+public class Problems
 {
 	public static void main(String args[])
 	{
@@ -41,7 +41,7 @@ public class Algorithms
 		tree.right.right = new Node("14");
 		tree.right.right.left = new Node("13");
 				
-		new Algorithms().goTraverse(tree);		
+		new Problems().goTraverse(tree);		
 	}
 	
 	Map< Integer,LinkedList<Node> > linkedLists = new HashMap<Integer, LinkedList<Node> >();
