@@ -5,7 +5,7 @@ package algos.datastructures.lists;
  * @author daviD_dev
  *
  */
-public class Problems
+public class ListProblems
 {
 	
 	public static void main(String args[])

@@ -7,7 +7,7 @@ import algos.algorithms.BaseOperations;
  * @author daviD_dev
  *
  */
-public class Problems
+public class SortProblems
 {
 	
 	public static void main(String args[])
@@ -45,7 +45,7 @@ public class Problems
 		BaseOperations.printArray(c);
 		*/
 		
-		/* 9.1 Solution #2 Test mergeOneArrayIntoOtherV2(); */
+		/* 9.1 Solution #2 Test mergeOneArrayIntoOtherV2(); 
 		int c[] = {5,10,12,15};
 		int b[] = {2,4,7,8,21};
 		int a[] = new int[c.length+b.length];		
@@ -53,6 +53,104 @@ public class Problems
 				a[i] = c[i];		
 		mergeOneArrayIntoOtherV2(a, b, 3);
 		BaseOperations.printArray(a);
+		*/
+		
+		/*
+		 * {0,[65][100]}
+		 * {1,[70][150]}
+		 * {2,[56][90]}
+		 * {3,[75][190]}
+		 */
+		
+		/* Test Problem [9.7] */
+		int input[][] = {
+				{65,100},
+				{70,150},
+				{56,90},
+				{75,190},
+				{23,89},
+				{70,122},
+				{75,195},
+				{77,100}};
+		new SortProblems().firstSort(input, 0, input.length-1);
+		//BaseOperations.printArray(input);
+		int length = new SortProblems().secondSort(input);
+		System.out.println("length = "+length);
+		//BaseOperations.printArray(input);
+	}
+	
+	
+	/**
+	 * <b>[9.7]</b>
+	 * <br/>
+	 * <p>
+	 * A circus is designing a tower routine consisting of people standing atop one another’s shoulders. 
+	 * For practical and aesthetic reasons, each person must be both shorter and lighter 
+	 * than the person below him or her. Given the heights and weights of each person in the circus, 
+	 * write a method to compute the largest possible number of people in such a tower.
+	 * </p> 
+	 * EXAMPLE:
+	 * <ul>
+	 * 		<li>Input (ht, wt)
+	 * 				<ul><li>(65, 100) (70, 150) (56, 90) (75, 190) (60, 95) (68, 110) (71,40)</li></ul>
+	 * 		</li>
+	 * 		<li>Output: The longest tower is length 6 and includes from top to bottom
+	 * 				<ul><li>(56, 90) (60,95) (65,100) (68,110) (70,150) (75,190)</li></ul>
+	 * 		</li>
+	 * </ul>
+	 * 
+	 * <b>firstSort uses Quicksort algorihtm</b>
+	 * 
+	 * @param a - array
+	 * @param i - left limit
+	 * @param j - right limit
+	 */
+	public void firstSort(int a[][], int i, int j)
+	{
+		int left = i;
+		int right = j;
+		int pivot[] = a[(left+right)/2];
+		do
+		{
+			while(a[i][0]<pivot[0]) i++;
+			while(a[j][0]>pivot[0]) j--;
+			
+			//swap
+			if(i<=j)
+			{
+				BaseOperations.swap(a, i, j);
+				i++;
+				j--;
+			}
+			
+		}while(i<=j);
+		
+		if(i < right)
+			firstSort(a, i, right);		
+		if(j > left)
+			firstSort(a, left, j);		
+	}
+	
+	/**
+	 * Now sort by weight
+	 * @param a
+	 * @return
+	 */
+	private int secondSort(int a[][])
+	{
+		int i = 0;				
+		while((i+1)<a.length)
+		{
+			if(a[i+1][1]<a[i][1])
+			{
+				if(a[i+1][0]==a[i][0] && a[i+1][1]<=a[i][1])
+					BaseOperations.swap(a, i, i+1);				
+				else 					
+					break;
+			}
+			i++;				
+		}
+		return i+1;
 	}
 	
 	/**
@@ -160,6 +258,6 @@ public class Problems
 				result[k++]=b[j++];
 		
 		return result;
-	}
+	}	
 		
 }

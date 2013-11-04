@@ -28,6 +28,18 @@ public class BaseOperations
 		System.out.println();
 	}
 	
+	public static void printArray(int array[][])
+	{
+		for(int i = 0; i < array.length; i++)
+		{
+			for(int j = 0; j < array[i].length; j++)
+			{
+				System.out.print(array[i][j]+",");
+			}
+			System.out.println();
+		}
+	}
+	
 	public static void swap(int input[], int i, int j)
 	{
 		int aux = input[j];
@@ -47,5 +59,12 @@ public class BaseOperations
 		char aux = string[j];
 		string[j]=string[i];
 		string[i]=aux;
+	}
+	
+	public static void swap(int a[][], int i, int j)
+	{
+		int aux[] = a[i];
+		a[i] = a[j];
+		a[j] = aux;
 	}
 }

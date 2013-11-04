@@ -45,7 +45,7 @@ public class SelectionSort
 				if(input[j] < input[minPos])
 					minPos = j;
 			
-			// if the min position since last iteration, swap the element
+			// if the min position change since last iteration, swap the element
 			if(minPos != i)
 				XOROperations.swap(input, minPos, i);
 		}

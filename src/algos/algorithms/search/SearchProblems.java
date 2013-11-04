@@ -7,7 +7,7 @@ package algos.algorithms.search;
  * @author daviD_dev
  *
  */
-public class Problems 
+public class SearchProblems 
 {
 
 	/**
@@ -35,7 +35,7 @@ public class Problems
 		int array[][] = {a,b,c,d,e};
 		int element = 19;
 		
-		System.out.println(new Problems().findElementInMatrix(array, element));
+		System.out.println(new SearchProblems().findElementInMatrix(array, element));
 		System.out.println("moves: "+moves);
 	}
 	

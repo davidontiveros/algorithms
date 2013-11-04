@@ -7,7 +7,7 @@ import java.util.*;
  * @author daviD_dev
  *
  */
-public class Problems
+public class GraphProblems
 {
 	static UndirectedGraph graph = new UndirectedGraph(9);	
 	static boolean founded = false;	
@@ -38,7 +38,7 @@ public class Problems
 		graph.addLink("Y","Z");
 		
 		//new Algorithms().routeExists(graph.getNode("A"),graph.getNode("E"));
-		boolean result = new Problems().routeExistsIterative(graph.getNode("F"),graph.getNode("C"));		
+		boolean result = new GraphProblems().routeExistsIterative(graph.getNode("F"),graph.getNode("C"));		
 		System.out.println(result);
 	}
 	
