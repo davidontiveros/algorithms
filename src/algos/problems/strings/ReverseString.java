@@ -6,6 +6,9 @@ package algos.problems.strings;
 import algos.algorithms.BaseOperations;
 
 /**
+ * 1.2 Write code to reverse a C-Style String. 
+ * (C-String means that “abcd” is represented as five characters, including the null character.)
+ * 
  * @author daviD_dev
  *
  */
@@ -27,20 +30,7 @@ public class ReverseString
 	private void reverseString(char[] s)
 	{
 		for(int i=0, j = s.length-1; i < s.length/2; i++, j--)
-			BaseOperations.swap(s, i, j);
-		
-		//if its pair
-		/*
-		if(s.length%2==0)
-		{
-						
-		}
-		else
-		{
-			for(int i=0, j = s.length-1; i < s.length/2; i++, j--)
-				
-		}
-		*/
+			BaseOperations.swap(s, i, j);			
 	}
 
 }
