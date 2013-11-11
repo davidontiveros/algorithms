@@ -73,8 +73,9 @@ public class SortProblems
 				{75,195},
 				{77,100}};
 		new SortProblems().firstSort(input, 0, input.length-1);
-		//BaseOperations.printArray(input);
+		BaseOperations.printMatrix(input);
 		int length = new SortProblems().secondSort(input);
+		BaseOperations.printMatrix(input);
 		System.out.println("length = "+length);
 		//BaseOperations.printArray(input);
 	}
