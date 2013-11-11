@@ -28,7 +28,7 @@ public class BaseOperations
 		System.out.println();
 	}
 	
-	public static void printArray(int array[][])
+	public static void printMatrix(int array[][])
 	{
 		for(int i = 0; i < array.length; i++)
 		{

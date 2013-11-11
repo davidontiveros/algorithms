@@ -35,6 +35,8 @@ public class UndirectedGraph
 		if( n1!=null && n2!=null)
 		{
 			ady[n1.number][n2.number] = 1;
+			//bidirectional link
+			ady[n2.number][n1.number] = 1;
 		}		
 	}
 	

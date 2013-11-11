@@ -1,4 +1,4 @@
-package algos.problems;
+package algos.problems.recursion;
 
 import java.util.*;
 
